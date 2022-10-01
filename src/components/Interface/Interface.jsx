@@ -13,14 +13,14 @@ export const Interface = () => {
         <Button
           icon={modalOpen ? closeIcon : menuIcon}
           alt="Menu icon"
-          bgColor={"#ffffff"}
+          bgColor="#ffffff"
           className="interface__modal-button"
           onClick={() => setModalOpen((prev) => !prev)}
           zIndex={10}
         />
         <SocialLinks />
-        {modalOpen && <Modal />}
       </div>
+      {modalOpen && <Modal />}
     </div>
   );
 };
