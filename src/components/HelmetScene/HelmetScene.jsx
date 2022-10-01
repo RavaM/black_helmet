@@ -2,6 +2,7 @@ import { Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Loader, Model } from "../index";
+import { Lights } from "../Lights/Lights";
 import "./HelmetScene.scss";
 
 export const HelmetScene = ({ yProgress }) => {
@@ -12,7 +13,7 @@ export const HelmetScene = ({ yProgress }) => {
           <Model yProgress={yProgress} />
           <Environment preset="night" />
         </Suspense>
-        <spotLight position={[-350, 600, 200]} intensity={3} />
+        <Lights />
       </Canvas>
     </div>
   );
