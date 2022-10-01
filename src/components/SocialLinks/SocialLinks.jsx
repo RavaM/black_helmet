@@ -1,4 +1,4 @@
-import { LinkButton } from "../LinkButton";
+import { LinkButton } from "../../components";
 import twitterLogo from "../../assets/icons/twitter-logo.svg";
 import dribbbleLogo from "../../assets/icons/dribbble-logo.svg";
 import youtubeLogo from "../../assets/icons/youtube-logo.svg";

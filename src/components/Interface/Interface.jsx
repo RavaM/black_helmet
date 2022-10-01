@@ -1,4 +1,4 @@
-import { SocialLinks } from "../SocialLinks";
+import { SocialLinks } from "../../components";
 import "./Interface.scss";
 
 export const Interface = () => {
