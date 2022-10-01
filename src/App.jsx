@@ -1,13 +1,13 @@
 import { HelmetScene, Interface } from "./components";
 import "./App.scss";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <HelmetScene />
       <Interface />
     </div>
   );
-}
+};
 
 export default App;
