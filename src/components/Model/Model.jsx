@@ -6,13 +6,19 @@ source: https://sketchfab.com/3d-models/black-helmet-fb2230b152824463a75e903d38d
 title: Black helmet
 */
 
-import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import React, { useEffect, useRef } from "react";
 
-export function Model(props) {
+export const Model = (props) => {
+  const ref = useRef();
+  useEffect(() => {
+    console.log("Rotated");
+    ref.current.rotation.y = -(Math.PI / 2) * props.yProgress;
+  }, [props.yProgress]);
+
   const { nodes, materials } = useGLTF("/black_helmet.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={ref}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <group position={[-2.63, -17.63, -33.11]}>
@@ -39,6 +45,6 @@ export function Model(props) {
       </group>
     </group>
   );
-}
+};
 
 useGLTF.preload("/black_helmet (1).glb");
