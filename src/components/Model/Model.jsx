@@ -13,7 +13,7 @@ export const Model = (props) => {
   const ref = useRef();
   useEffect(() => {
     console.log("Rotated");
-    ref.current.rotation.y = -(Math.PI / 2) * props.yProgress;
+    ref.current.rotation.y = (Math.PI / 2) * props.yProgress;
   }, [props.yProgress]);
 
   const { nodes, materials } = useGLTF("/black_helmet.glb");
