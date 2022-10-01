@@ -2,7 +2,7 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Model } from "../index";
-import "./HelmetScene.css";
+import "./HelmetScene.scss";
 
 export const HelmetScene = () => {
   return (
