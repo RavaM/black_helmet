@@ -4,9 +4,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  pointer-events: none;
 
   &__container {
+    pointer-events: none;
     position: relative;
     height: 100%;
     width: 100%;
@@ -14,5 +14,11 @@
     & * {
       pointer-events: initial;
     }
+  }
+
+  &__modal-button {
+    position: absolute;
+    top: 60px;
+    left: 60px;
   }
 }
