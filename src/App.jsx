@@ -1,10 +1,11 @@
-import { HelmetScene } from './components/HelmetScene';
-import './App.css';
+import { HelmetScene, Interface } from "./components";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <HelmetScene />
+      <Interface />
     </div>
   );
 }
