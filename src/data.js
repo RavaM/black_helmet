@@ -22,3 +22,21 @@ export const socialData = [
     href: "https://dribbble.com/",
   },
 ];
+
+export const scrollData = [
+  {
+    text: "ScrollText 1",
+    start: 0,
+    end: 0.2,
+  },
+  {
+    text: "ScrollText 2",
+    start: 0.3,
+    end: 0.5,
+  },
+  {
+    text: "ScrollText 3",
+    start: 0.7,
+    end: 0.9,
+  },
+];

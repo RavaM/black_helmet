@@ -2,6 +2,7 @@ import { HelmetScene, Interface } from "./components";
 import "./App.scss";
 import { useEffect, useState } from "react";
 import { useScroll } from "framer-motion";
+import { ScrollText } from "./components/ScrollText/ScrollText";
 
 const App = () => {
   const { scrollYProgress } = useScroll();
@@ -17,6 +18,7 @@ const App = () => {
     <div className="App">
       <HelmetScene yProgress={yProgress} />
       <Interface />
+      <ScrollText />
     </div>
   );
 };

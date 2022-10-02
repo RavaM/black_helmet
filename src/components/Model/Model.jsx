@@ -12,7 +12,6 @@ import React, { useEffect, useRef } from "react";
 export const Model = (props) => {
   const ref = useRef();
   useEffect(() => {
-    console.log("Rotated");
     ref.current.rotation.y = (Math.PI / 2) * props.yProgress;
   }, [props.yProgress]);
 
