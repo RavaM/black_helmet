@@ -2,7 +2,7 @@ import { Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import { Loader, Model } from "../index";
-import { Lights } from "../Lights/Lights";
+import { Lights } from "../../components";
 import "./HelmetScene.scss";
 
 export const HelmetScene = () => {

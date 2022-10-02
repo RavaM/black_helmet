@@ -1,9 +1,11 @@
+import { motion, useScroll } from "framer-motion";
 import { useState } from "react";
+
 import menuIcon from "../../assets/icons/menu-icon.svg";
 import closeIcon from "../../assets/icons/close-icon.svg";
 import { Button, SocialLinks, Modal } from "../../components";
+
 import "./Interface.scss";
-import { motion, useScroll } from "framer-motion";
 
 export const Interface = () => {
   const [modalOpen, setModalOpen] = useState(false);
