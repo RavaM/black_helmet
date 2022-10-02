@@ -7,3 +7,4 @@ export { SocialLinks } from "./SocialLinks/SocialLinks";
 export { Modal } from "./Modal/Modal";
 export { Loader } from "./Loader/Loader";
 export { Lights } from "./Lights/Lights";
+export { ProgressBar } from "./ProgressBar/ProgressBar";
