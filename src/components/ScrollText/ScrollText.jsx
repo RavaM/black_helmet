@@ -22,7 +22,14 @@ export const ScrollText = () => {
       {scrollData.map(
         (data) =>
           showText(data) && (
-            <div className="scrollText" key={data.text}>
+            <div
+              className="scrollText"
+              key={data.text}
+              style={{
+                top: data.top,
+                left: data.left,
+              }}
+            >
               {data.text}
             </div>
           )
