@@ -8,3 +8,4 @@ export { Modal } from "./Modal/Modal";
 export { Loader } from "./Loader/Loader";
 export { Lights } from "./Lights/Lights";
 export { ProgressBar } from "./ProgressBar/ProgressBar";
+export { ScrollText } from "./ScrollText/ScrollText";
