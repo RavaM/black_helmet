@@ -1,21 +1,25 @@
 import { HelmetScene, Interface } from "./components";
 import "./App.scss";
 import { useEffect, useState } from "react";
-import { useScroll } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { ScrollText } from "./components/ScrollText/ScrollText";
 
 const App = () => {
   const { scrollYProgress } = useScroll();
-  const [yProgress, setyProgress] = useState(scrollYProgress.current);
+  const [yProgress, setYProgress] = useState(scrollYProgress.current);
 
   useEffect(() => {
     return scrollYProgress.onChange((latest) => {
-      setyProgress(latest);
+      setYProgress(latest);
     });
   }, [scrollYProgress]);
 
   return (
     <div className="App">
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <HelmetScene yProgress={yProgress} />
       <Interface />
       <ScrollText />
