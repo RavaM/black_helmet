@@ -11,7 +11,7 @@ export const SocialLinks = () => {
           icon={social.icon}
           alt={social.alt}
           href={social.href}
-          key={social.alt}
+          key={social.index}
         />
       ))}
     </div>

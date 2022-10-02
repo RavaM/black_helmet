@@ -24,7 +24,7 @@ export const ScrollText = () => {
           showText(data) && (
             <div
               className="scrollText"
-              key={data.text}
+              key={data.index}
               style={{
                 top: data.top,
                 left: data.left,
