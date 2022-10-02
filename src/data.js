@@ -25,24 +25,24 @@ export const socialData = [
 
 export const scrollData = [
   {
-    text: "ScrollText 1",
+    text: "Night visor",
     start: 0.1,
     end: 0.25,
     top: "23%",
     left: "68%",
   },
   {
-    text: "ScrollText 2",
+    text: "Air filler",
     start: 0.35,
     end: 0.5,
     top: "78%",
     left: "27%",
   },
   {
-    text: "ScrollText 3",
-    start: 0.6,
-    end: 0.75,
-    top: "37%",
+    text: "Custom open",
+    start: 0.63,
+    end: 0.8,
+    top: "32%",
     left: "17%",
   },
 ];
