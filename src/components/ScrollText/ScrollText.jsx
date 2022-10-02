@@ -19,6 +19,12 @@ export const ScrollText = () => {
 
   return (
     <div className="scrollText__container">
+      {showText({ start: 0, end: 0.05 }) && (
+        <div className="scrollText__initial">
+          <h1 className="scrollText__initial-title">Black helmet</h1>
+          <p className="scrollText__initial-cta">Scroll down</p>
+        </div>
+      )}
       {scrollData.map(
         (data) =>
           showText(data) && (
