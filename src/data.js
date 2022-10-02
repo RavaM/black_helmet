@@ -32,7 +32,7 @@ export const scrollData = [
     text: "Night visor",
     start: 0.1,
     end: 0.25,
-    top: "23%",
+    top: "15%",
     left: "68%",
   },
   {
@@ -40,16 +40,16 @@ export const scrollData = [
     text: "Air filler",
     start: 0.35,
     end: 0.5,
-    top: "78%",
+    top: "85%",
     left: "27%",
   },
   {
     index: 3,
-    text: "Custom open",
+    text: "Custom opening",
     start: 0.63,
     end: 0.8,
-    top: "32%",
-    left: "17%",
+    top: "18%",
+    left: "10%",
   },
 ];
 
