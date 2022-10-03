@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { modalData } from "../../data";
 import "./Modal.scss";
 
@@ -30,42 +29,22 @@ export const Modal = ({ isVisible }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          exit={{
-            opacity: 0,
-          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           key="modal"
           className="modal__background"
         >
           <motion.div
-            transition={{
-              delay: 0.1,
-              duration: 0.4,
-            }}
-            initial={{
-              scale: 0,
-            }}
-            animate={{
-              scale: 1,
-            }}
+            transition={{ delay: 0.1, duration: 0.4 }}
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
             className="modal"
           >
             <motion.h1
-              transition={{
-                delay: 0.6,
-                duration: 0.3,
-              }}
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
+              transition={{ delay: 0.6, duration: 0.3 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               className="modal__title"
             >
               Modal
