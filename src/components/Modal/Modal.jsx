@@ -4,14 +4,6 @@ import { modalData } from "../../data";
 import "./Modal.scss";
 
 export const Modal = ({ isVisible }) => {
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.body.style.overflow = "initial";
-    };
-  }, []);
-
   const list = {
     visible: {
       opacity: 1,

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import closeIcon from "../../assets/icons/close-icon.svg";
 import menuIcon from "../../assets/icons/menu-icon.svg";
@@ -8,6 +8,14 @@ import "./Interface.scss";
 
 export const Interface = () => {
   const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "initial";
+    }
+  }, [modalOpen]);
 
   return (
     <div className="interface">
