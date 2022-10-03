@@ -23,7 +23,7 @@ export const Interface = () => {
         />
         <SocialLinks />
       </div>
-      {modalOpen && <Modal />}
+      <Modal isVisible={modalOpen} />
     </div>
   );
 };
