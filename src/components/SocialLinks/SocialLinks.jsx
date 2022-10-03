@@ -10,7 +10,7 @@ export const SocialLinks = () => {
       opacity: 1,
       transition: {
         when: "beforeChildren",
-        staggerChildren: 0.3,
+        staggerChildren: 0.5,
       },
     },
     hidden: {

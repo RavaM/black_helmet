@@ -6,7 +6,7 @@ export const Button = ({ bgColor, alt, icon, className, onClick, zIndex }) => {
   return (
     <motion.button
       transition={{
-        duration: 0.3,
+        duration: 0.5,
       }}
       initial={{
         opacity: 0,
