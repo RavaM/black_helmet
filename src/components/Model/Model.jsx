@@ -7,22 +7,12 @@ title: Black helmet
 */
 
 import { useGLTF } from "@react-three/drei";
-import { useScroll } from "framer-motion";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 export const Model = (props) => {
-  const { scrollYProgress } = useScroll();
-  const ref = useRef();
-
-  useEffect(() => {
-    return scrollYProgress.onChange((latest) => {
-      ref.current.rotation.y = (Math.PI / 2) * latest;
-    });
-  }, [scrollYProgress]);
-
   const { nodes, materials } = useGLTF("/black_helmet.glb");
   return (
-    <group {...props} dispose={null} ref={ref}>
+    <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>
           <group position={[-2.63, -17.63, -33.11]}>
@@ -51,4 +41,4 @@ export const Model = (props) => {
   );
 };
 
-useGLTF.preload("/black_helmet (1).glb");
+useGLTF.preload("/black_helmet.glb");
