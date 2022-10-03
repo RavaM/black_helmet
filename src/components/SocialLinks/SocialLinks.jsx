@@ -1,10 +1,33 @@
+import { motion } from "framer-motion";
+
 import { LinkButton } from "../../components";
 import { socialData } from "../../data";
 import "./SocialLinks.scss";
 
 export const SocialLinks = () => {
+  const list = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+
   return (
-    <div className="socialLinks">
+    <motion.div
+      className="socialLinks"
+      initial="hidden"
+      animate="visible"
+      variants={list}
+    >
       {socialData.map((social) => (
         <LinkButton
           bgColor={social.bgColor}
@@ -14,6 +37,6 @@ export const SocialLinks = () => {
           key={social.index}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
