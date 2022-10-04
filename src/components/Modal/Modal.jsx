@@ -36,7 +36,7 @@ export const Modal = ({ isVisible }) => {
           className="modal__background"
         >
           <motion.div
-            transition={{ delay: 0.1, duration: 0.4 }}
+            transition={{ delay: 0.1, duration: 0.4, type: "spring" }}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             className="modal"
