@@ -19,27 +19,42 @@ export const ScrollText = () => {
 
   return (
     <div className="scrollText__container">
-      {showText({ start: 0, end: 0.05 }) && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.5 }}
-          className="scrollText__initial"
-        >
-          <h1 className="scrollText__initial-title">Black helmet</h1>
-          <p className="scrollText__initial-cta">Scroll down</p>
-        </motion.div>
-      )}
+      <AnimatePresence>
+        {showText({ start: 0, end: 0.02 }) && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { delay: 0 } }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+            className="scrollText__initial"
+          >
+            <h1 className="scrollText__initial-title">Black helmet</h1>
+            <motion.p
+              animate={{
+                y: [0, 20],
+                opacity: [1, 0],
+                transition: {
+                  duration: 0.8,
+                  repeat: Infinity,
+                  repeatDelay: 1,
+                },
+              }}
+              className="scrollText__initial-cta"
+            >
+              Scroll down
+            </motion.p>
+          </motion.div>
+        )}
+      </AnimatePresence>
       {scrollData.map((data) => (
-        <AnimatePresence>
+        <AnimatePresence key={data.index}>
           {showText(data) && (
             <motion.div
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.7 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="scrollText"
-              key={data.index}
               style={{
                 top: data.top,
                 left: data.left,
