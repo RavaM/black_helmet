@@ -1,10 +1,11 @@
+import { Suspense, useEffect, useRef } from "react";
+import { useScroll } from "framer-motion";
 import { Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { Suspense, useEffect, useRef } from "react";
+
 import { Loader, Model } from "../index";
 import { Lights } from "../../components";
 import "./HelmetScene.scss";
-import { useScroll } from "framer-motion";
 
 export const HelmetScene = () => {
   const { scrollYProgress } = useScroll();

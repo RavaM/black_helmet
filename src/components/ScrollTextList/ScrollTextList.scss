@@ -1,0 +1,45 @@
+.scrollTextList {
+  position: absolute;
+  font-size: 32px;
+
+  &__container {
+    color: #ffffff;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    padding: 60px;
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    vertical-align: middle;
+  }
+
+  &__line {
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+
+    &-1 {
+      width: 230px;
+      top: 258px;
+      right: 145px;
+      transform: rotate(-36deg);
+    }
+
+    &-2 {
+      width: 190px;
+      bottom: 235px;
+      left: 235px;
+      transform: rotate(-47deg);
+    }
+
+    &-3 {
+      width: 360px;
+      top: 356px;
+      left: 56px;
+      transform: rotate(48deg);
+    }
+  }
+}

@@ -9,3 +9,5 @@ export { Loader } from "./Loader/Loader";
 export { Lights } from "./Lights/Lights";
 export { ProgressBar } from "./ProgressBar/ProgressBar";
 export { ScrollText } from "./ScrollText/ScrollText";
+export { ScrollTextList } from "./ScrollTextList/ScrollTextList";
+export { InitialText } from "./InitialText/InitialText";
