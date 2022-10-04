@@ -52,21 +52,25 @@ export const ScrollText = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      {scrollData.map((data) => (
+      {scrollData.map((data, i) => (
         <AnimatePresence key={data.index}>
           {showText(data) && (
-            <motion.div
-              transition={{ duration: 0.7 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="scrollText"
-              style={{
-                top: data.top,
-                left: data.left,
-              }}
-            >
-              {data.text}
+            <motion.div transition={{ duration: 0.7 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}>
+              <motion.div
+                className="scrollText"
+                style={{
+                  top: data.top,
+                  left: data.left,
+                }}
+              >
+                {data.text}
+              </motion.div>
+              <div
+                className={`scrollText__line scrollText__line-${i + 1}`}
+              ></div>
             </motion.div>
           )}
         </AnimatePresence>

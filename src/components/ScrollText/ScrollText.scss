@@ -33,4 +33,31 @@
       bottom: 20px;
     }
   }
+
+  &__line {
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+
+    &-1 {
+      width: 230px;
+      top: 258px;
+      right: 145px;
+      transform: rotate(-36deg);
+    }
+
+    &-2 {
+      width: 190px;
+      bottom: 235px;
+      left: 235px;
+      transform: rotate(-47deg);
+    }
+
+    &-3 {
+      width: 360px;
+      top: 356px;
+      left: 56px;
+      transform: rotate(48deg);
+    }
+  }
 }
