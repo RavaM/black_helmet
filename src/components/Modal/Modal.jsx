@@ -7,7 +7,7 @@ export const Modal = ({ isVisible }) => {
     visible: {
       opacity: 1,
       transition: {
-        delay: 1.1,
+        delay: 0.9,
         when: "beforeChildren",
         staggerChildren: 0.3,
       },
@@ -42,7 +42,7 @@ export const Modal = ({ isVisible }) => {
             className="modal"
           >
             <motion.h1
-              transition={{ delay: 0.8, duration: 0.3 }}
+              transition={{ delay: 0.6, duration: 0.4 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="modal__title"
