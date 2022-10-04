@@ -63,7 +63,7 @@ export const modalData = [
     index: 2,
   },
   {
-    text: "Curabitur eu tincidunt nisl. Curabitur ultricies nec risus non fringilla. Vestibulum tincidunt dignissim mauris, sit amet fermentum nulla blandit dapibus.",
+    text: "Curabitur eu tincidunt nisl. Curabitur ultricies nec risus non fringilla. Vestibulum tincidunt dignisim mauris, sit amet fermentum nulla blandit dapibus.",
     index: 3,
   },
 ];
