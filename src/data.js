@@ -41,7 +41,7 @@ export const scrollData = [
     start: 0.35,
     end: 0.5,
     top: "85%",
-    left: "27%",
+    left: "17%",
   },
   {
     index: 3,
@@ -49,7 +49,7 @@ export const scrollData = [
     start: 0.63,
     end: 0.8,
     top: "18%",
-    left: "10%",
+    left: "-10%",
   },
 ];
 

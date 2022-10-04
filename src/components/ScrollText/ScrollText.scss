@@ -5,11 +5,15 @@
   &__container {
     color: #ffffff;
     position: fixed;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     right: 0;
-    bottom: 0;
     left: 0;
     padding: 60px;
+    width: 900px;
+    height: 900px;
+    margin: 0 auto;
+    vertical-align: middle;
   }
 
   &__initial {
