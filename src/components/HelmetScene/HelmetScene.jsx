@@ -12,7 +12,9 @@ export const HelmetScene = () => {
 
   useEffect(() => {
     return scrollYProgress.onChange((latest) => {
-      ref.current.rotation.y = (Math.PI / 2) * latest;
+      if (ref.current) {
+        ref.current.rotation.y = (Math.PI / 2) * latest;
+      }
     });
   }, [scrollYProgress]);
 

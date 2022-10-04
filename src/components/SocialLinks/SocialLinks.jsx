@@ -11,6 +11,7 @@ export const SocialLinks = () => {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.5,
+        delay: 2,
       },
     },
     hidden: {

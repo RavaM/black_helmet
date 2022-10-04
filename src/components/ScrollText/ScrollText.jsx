@@ -1,4 +1,4 @@
-import { useScroll } from "framer-motion";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
 import { scrollData } from "../../data";
 import "./ScrollText.scss";
@@ -20,15 +20,24 @@ export const ScrollText = () => {
   return (
     <div className="scrollText__container">
       {showText({ start: 0, end: 0.05 }) && (
-        <div className="scrollText__initial">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
+          className="scrollText__initial"
+        >
           <h1 className="scrollText__initial-title">Black helmet</h1>
           <p className="scrollText__initial-cta">Scroll down</p>
-        </div>
+        </motion.div>
       )}
-      {scrollData.map(
-        (data) =>
-          showText(data) && (
-            <div
+      {scrollData.map((data) => (
+        <AnimatePresence>
+          {showText(data) && (
+            <motion.div
+              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               className="scrollText"
               key={data.index}
               style={{
@@ -37,9 +46,10 @@ export const ScrollText = () => {
               }}
             >
               {data.text}
-            </div>
-          )
-      )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      ))}
     </div>
   );
 };

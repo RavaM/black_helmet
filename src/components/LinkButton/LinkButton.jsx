@@ -10,6 +10,7 @@ export const LinkButton = ({ href, ...props }) => {
 
   return (
     <motion.a
+      transition={{ duration: 0.5 }}
       variants={linkButton}
       href={href}
       target="_blank"
